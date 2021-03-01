@@ -22,7 +22,8 @@ class MemberFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=>$this->faker->lastName,
+            'web'=>$this->faker->url,
         ];
     }
 }
