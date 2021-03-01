@@ -10,4 +10,8 @@ class Category extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }
