@@ -24,7 +24,10 @@ class Project extends Model
     }
     public function tags()
     {
-        return $this->morphToMany(Tag::class,'taggable');
+        return $this->morphToMany(Tag::class, 'taggable');
     }
-  
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }

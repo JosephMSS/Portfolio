@@ -3,6 +3,7 @@
 namespace Tests\Unit\app\Models;
 
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Member;
 use App\Models\Project;
 use App\Models\User;
@@ -57,6 +58,18 @@ class ProjectTest extends TestCase
         $project = Project::factory()->create(['user_id' => $user->id, 'category_id' => $category->id]);
         
         $this->assertInstanceOf(Collection::class, $project->tags);
+        
+    }
+    public function test_morph_one_image()
+    {
+        $category = Category::factory()->create();
+        $user = User::factory()->create();
+        $project = Project::factory()->create(['user_id' => $user->id, 'category_id' => $category->id]);
+        $image = Image::factory()->create([
+            "imageable_id" => $project->id,
+            "imageable_type" => "App\Models\Project",
+          ]);
+        $this->assertInstanceOf(Image::class, $project->image);
         
     }
 
