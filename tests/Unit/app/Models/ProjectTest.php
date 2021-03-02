@@ -47,7 +47,17 @@ class ProjectTest extends TestCase
         $project = Project::factory()->create(['user_id' => $user->id, 'category_id' => $category->id]);
 
         $this->assertEquals(1, $project->user->count());
+        
         $this->assertInstanceOf(User::class, $project->user);
     }
-    
+    public function test_morph_to_many_tags()
+    {
+        $category = Category::factory()->create();
+        $user = User::factory()->create();
+        $project = Project::factory()->create(['user_id' => $user->id, 'category_id' => $category->id]);
+        
+        $this->assertInstanceOf(Collection::class, $project->tags);
+        
+    }
+
 }
