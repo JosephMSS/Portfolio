@@ -19,8 +19,8 @@
     </head>
     <body>
     <livewire:navigation/>
-        <div class="font-sans text-gray-900 antialiased">
+    <main class=" bg-main_brand bg-opacity-75    font-sans text-gray-900 antialiased">
             {{ $slot }}
-        </div>
+        </main>
     </body>
 </html>

@@ -11,13 +11,13 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'main_brand':'#2b2e4a',
-                'dark_shades':'#53354A',
-                'dark_accent':'#903749',
-                'light_accent':'#E84545',
-                'light_shades':'#E4DDDE',
+                'main_brand':'#522D5B',
+                'dark_shades':'#FB7B6B',
+                'dark_accent':'#D7385E',
+                'light_accent':'#EA78A4',
+                'light_shades':'#E7D39F',
                 'primary':'#554f6a',
-                'info':'#523446',
+                'info':'#f47a6f',
                 'success':'#4f9258',
                 'warning':'#cc8220',
                 'danger':'#f44336',

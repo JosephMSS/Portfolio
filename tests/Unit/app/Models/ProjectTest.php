@@ -72,5 +72,6 @@ class ProjectTest extends TestCase
         $this->assertInstanceOf(Image::class, $project->image);
         
     }
+    
 
 }

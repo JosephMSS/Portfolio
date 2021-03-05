@@ -8,5 +8,4 @@
 
     <!-- Mobile menu, show/hide based on menu state. -->
     <x-navigation.nav-menu-mobile />
-
-</nav>
+ </nav>
